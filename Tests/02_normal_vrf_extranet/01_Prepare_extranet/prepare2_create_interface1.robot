@@ -23,9 +23,8 @@ ${expected_status}            active
 ${expected_result}            5 packets transmitted, 5 received, 0% packet loss
 ${expected_value}             OK
 
-
 *** TestCases ***
-(2-1) Create Interface
+(2-1) Create Interface(30.1.0.1/24) in VLAN(2001) in Vrf(V06010001)
     ${INF_UUIDS}=  Create Dictionary
     ${ipv4_gatesw_reserve}=  Create List  ${ipv4_gatesw_primary}
                                            ...  ${ipv4_gatesw_secondary}  

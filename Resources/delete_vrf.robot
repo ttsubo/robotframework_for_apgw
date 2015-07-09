@@ -1,5 +1,4 @@
 *** settings ***
-Resource          get_token.robot
 Library           Lib.conversions
 Library           Lib/RequestsLibrary.py
 Library           Lib/Common.py

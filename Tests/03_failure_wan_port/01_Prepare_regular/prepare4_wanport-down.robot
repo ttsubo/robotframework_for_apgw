@@ -4,8 +4,6 @@ Library         SSHLibrary
 Test Teardown       Close All Connections
 
 *** Variables ***
-${gateswitch1}           10.128.141.15
-${gateswitch2}           10.128.141.16
 ${user}                  root
 ${pass}                  netronome
 

@@ -10,10 +10,10 @@ Library           Collections
 ${nw_user_id}                 V06010002
 
 *** TestCases ***
-(9-1) Delete Vrf
+(8-1) Delete Vrf
     Delete Vrf  ${VRF_UUIDS['${nw_user_id}']}
 
-(9-2) Check Status of Delete_Vrf
+(8-2) Check Status of Delete_Vrf
     Wait Until Keyword Succeeds  30s  10s
     ...  Check Status Delete_Vrf
     ...  ${VRF_UUIDS['${nw_user_id}']}

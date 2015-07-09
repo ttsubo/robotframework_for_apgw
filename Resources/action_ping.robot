@@ -11,7 +11,6 @@ Action Ping
     ${params}=  Create Dictionary  destination=${destination}
     ${action}=  Create Dictionary  params=${params}
                                    ...  method=${cmd}
-    Get Token
     Create Session  Plugin  http://${APGW_PLUGIN}:9696  headers=${X-AUTH}
     ${data}=  Create Dictionary   action=${action}
     ${result} =  Put  Plugin  /v2.0/apgw/vrfs/${vpn_id}/action  ${data}

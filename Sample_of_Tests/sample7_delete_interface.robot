@@ -19,23 +19,23 @@ ${expected_result_vfw1}       No Route to 30.2.0.4
 ${expected_result_vfw2}       No Route to 30.2.0.5
 
 *** TestCases ***
-(8-1) Delete Interface
+(7-1) Delete Interface
     Delete Interface  ${VRF_UUIDS['${nw_user_id}']}  ${INF_UUIDS['${name}']}
 
-(8-2) Check Status of Delete_Interface
+(7-2) Check Status of Delete_Interface
     Wait Until Keyword Succeeds  30s  10s
     ...  Check Status Delete_Interface
     ...  ${VRF_UUIDS['${nw_user_id}']}
     ...  ${INF_UUIDS['${name}']}
 
-(8-3) Check Connectivity From GateSW to vFirewall(Primary)
+(7-3) Check Connectivity From GateSW to vFirewall(Primary)
     Wait Until Keyword Succeeds  60s  10s
     ...  Check Connectivity
     ...  ${VRF_UUIDS['${nw_user_id}']}
     ...  ${ipv4_vfw1}
     ...  ${expected_result_vfw1}
 
-(8-4) Check Connectivity From GateSW to vFirewall(Secondary)
+(7-4) Check Connectivity From GateSW to vFirewall(Secondary)
     Wait Until Keyword Succeeds  60s  10s
     ...  Check Connectivity
     ...  ${VRF_UUIDS['${nw_user_id}']}
